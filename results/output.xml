@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221022 20:10:40.393" rpa="false" schemaversion="3">
+<suite id="s1" name="loginPage" source="C:\MyStore\loginPage.robot">
+<test id="s1-t1" name="Cenário 06: Adicionar a lista de desejos" line="40">
+<kw name="Open Browser To Login Page" library="loginR" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221022 20:10:40.956" level="INFO">Opening browser 'CHROME' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20221022 20:10:40.955" endtime="20221022 20:10:48.148"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221022 20:10:48.149" endtime="20221022 20:10:48.275"/>
+</kw>
+<status status="PASS" starttime="20221022 20:10:40.954" endtime="20221022 20:10:48.275"/>
+</kw>
+<kw name="Clicar em Sign In" library="loginR">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[@id='page']//div[@class='nav']//a[@class='login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221022 20:10:48.279" level="INFO">Clicking element 'xpath=//div[@id='page']//div[@class='nav']//a[@class='login']'.</msg>
+<status status="PASS" starttime="20221022 20:10:48.278" endtime="20221022 20:10:52.029"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Login - My Store</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221022 20:10:52.033" level="INFO">Page title is 'Login - My Store'.</msg>
+<status status="PASS" starttime="20221022 20:10:52.029" endtime="20221022 20:10:52.033"/>
+</kw>
+<status status="PASS" starttime="20221022 20:10:48.276" endtime="20221022 20:10:52.034"/>
+</kw>
+<kw name="Login to the Page" library="loginR">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@id='email']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221022 20:10:52.035" level="INFO">Clicking element 'xpath=//input[@id='email']'.</msg>
+<status status="PASS" starttime="20221022 20:10:52.034" endtime="20221022 20:10:52.085"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@id='email']</arg>
+<arg>contatestautomacao@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221022 20:10:52.086" level="INFO">Typing text 'contatestautomacao@gmail.com' into text field 'xpath=//input[@id='email']'.</msg>
+<status status="PASS" starttime="20221022 20:10:52.086" endtime="20221022 20:10:52.169"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@id='passwd']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221022 20:10:52.169" level="INFO">Clicking element 'xpath=//input[@id='passwd']'.</msg>
+<status status="PASS" starttime="20221022 20:10:52.169" endtime="20221022 20:10:52.220"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath=//input[@id='passwd']</arg>
+<arg>contaautomacao</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221022 20:10:52.220" level="INFO">Typing password into text field 'xpath=//input[@id='passwd']'.</msg>
+<msg timestamp="20221022 20:10:52.244" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221022 20:10:52.280" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221022 20:10:52.220" endtime="20221022 20:10:52.280"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[@id='SubmitLogin']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221022 20:10:52.280" level="INFO">Clicking element 'xpath=//button[@id='SubmitLogin']'.</msg>
+<status status="PASS" starttime="20221022 20:10:52.280" endtime="20221022 20:10:55.272"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//span[@class='navigation_page']</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221022 20:10:55.273" endtime="20221022 20:10:55.336"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=//span[@class='navigation_page']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221022 20:10:55.353" level="INFO">Element 'xpath=//span[@class='navigation_page']' is displayed.</msg>
+<status status="PASS" starttime="20221022 20:10:55.336" endtime="20221022 20:10:55.353"/>
+</kw>
+<status status="PASS" starttime="20221022 20:10:52.034" endtime="20221022 20:10:55.353"/>
+</kw>
+<kw name="Page Home" library="loginR">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@class='home']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221022 20:10:55.354" level="INFO">Clicking element 'xpath=//a[@class='home']'.</msg>
+<status status="PASS" starttime="20221022 20:10:55.354" endtime="20221022 20:10:57.379"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@id='search_query_top']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221022 20:10:57.379" endtime="20221022 20:10:57.400"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@id='search_query_top']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221022 20:10:57.414" level="INFO">Element 'xpath=//input[@id='search_query_top']' is displayed.</msg>
+<status status="PASS" starttime="20221022 20:10:57.400" endtime="20221022 20:10:57.414"/>
+</kw>
+<status status="PASS" starttime="20221022 20:10:55.354" endtime="20221022 20:10:57.414"/>
+</kw>
+<kw name="Verificacao Page Home" library="loginR">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//a[contains(@title,'Women')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221022 20:10:57.415" endtime="20221022 20:10:57.431"/>
+</kw>
+<status status="PASS" starttime="20221022 20:10:57.414" endtime="20221022 20:10:57.431"/>
+</kw>
+<kw name="Clica no botão de pesquisa" library="loginR">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=search_query_top</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221022 20:10:57.432" level="INFO">Clicking element 'search_query_top'.</msg>
+<status status="PASS" starttime="20221022 20:10:57.432" endtime="20221022 20:10:57.478"/>
+</kw>
+<status status="PASS" starttime="20221022 20:10:57.432" endtime="20221022 20:10:57.478"/>
+</kw>
+<kw name="Pesquisa por &quot;Blouse&quot;" library="loginR" sourcename="Pesquisa por &quot;${PRODUTO}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=search_query_top</arg>
+<arg>text=${PRODUTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221022 20:10:57.479" level="INFO">Typing text 'Blouse' into text field 'search_query_top'.</msg>
+<status status="PASS" starttime="20221022 20:10:57.479" endtime="20221022 20:10:57.544"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[@type='submit'][contains(.,'Search')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221022 20:10:57.544" level="INFO">Clicking element 'xpath=//button[@type='submit'][contains(.,'Search')]'.</msg>
+<status status="PASS" starttime="20221022 20:10:57.544" endtime="20221022 20:10:58.811"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//span[@class='heading-counter']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221022 20:10:58.811" endtime="20221022 20:10:58.834"/>
+</kw>
+<status status="PASS" starttime="20221022 20:10:57.479" endtime="20221022 20:10:58.834"/>
+</kw>
+<kw name="Adicionar a lista de desejos" library="loginR">
+<kw name="Mouse Down On Image" library="SeleniumLibrary">
+<arg>//img[@title='Blouse']</arg>
+<doc>Simulates a mouse down event on an image identified by ``locator``.</doc>
+<status status="PASS" starttime="20221022 20:10:58.835" endtime="20221022 20:10:59.133"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[contains(.,'Add to Wishlist')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221022 20:10:59.135" level="INFO">Clicking element 'xpath=//a[contains(.,'Add to Wishlist')]'.</msg>
+<status status="PASS" starttime="20221022 20:10:59.134" endtime="20221022 20:10:59.209"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//p[contains(.,'Added to your wishlist.')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221022 20:10:59.209" endtime="20221022 20:11:00.092"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>locator=//a[contains(@title,'Close')]</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20221022 20:11:00.092" endtime="20221022 20:11:00.102"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@title='Close']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221022 20:11:00.103" level="INFO">Clicking element 'xpath=//a[@title='Close']'.</msg>
+<msg timestamp="20221022 20:11:00.362" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-47.png"&gt;&lt;img src="selenium-screenshot-47.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221022 20:11:00.362" level="FAIL">Element with locator 'xpath=//a[@title='Close']' not found.</msg>
+<status status="FAIL" starttime="20221022 20:11:00.102" endtime="20221022 20:11:00.398"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[contains(@class,'account')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221022 20:11:00.398" endtime="20221022 20:11:00.398"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//span[contains(.,'My account')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20221022 20:11:00.398" endtime="20221022 20:11:00.398"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[contains(.,'My wishlists')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221022 20:11:00.398" endtime="20221022 20:11:00.398"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//h1[contains(.,'My wishlists')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20221022 20:11:00.398" endtime="20221022 20:11:00.398"/>
+</kw>
+<kw name="Page Home" library="loginR">
+<status status="NOT RUN" starttime="20221022 20:11:00.398" endtime="20221022 20:11:00.399"/>
+</kw>
+<status status="FAIL" starttime="20221022 20:10:58.835" endtime="20221022 20:11:00.399"/>
+</kw>
+<kw name="Fechar o Browser" library="loginR" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221022 20:11:00.400" endtime="20221022 20:11:02.563"/>
+</kw>
+<status status="PASS" starttime="20221022 20:11:00.400" endtime="20221022 20:11:02.564"/>
+</kw>
+<tag>Lista_de_desejos</tag>
+<status status="FAIL" starttime="20221022 20:10:40.952" endtime="20221022 20:11:02.566">Element with locator 'xpath=//a[@title='Close']' not found.</status>
+</test>
+<doc>Testes de login</doc>
+<status status="FAIL" starttime="20221022 20:10:40.394" endtime="20221022 20:11:02.572"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Lista_de_desejos</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="loginPage">loginPage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
